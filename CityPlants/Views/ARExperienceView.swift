@@ -540,6 +540,7 @@ class Coordinator: NSObject, ARSessionDelegate {
         
         let tapLocation = sender.location(in: arView)
         
+        
         if let entity = arView.entity(at: tapLocation) as? ModelEntity {
             selectedEntity?.wrappedValue = entity
             plantName?.wrappedValue = entity.name.replacingOccurrences(of: ".usdz", with: "").capitalized

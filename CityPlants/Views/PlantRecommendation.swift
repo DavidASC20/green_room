@@ -48,9 +48,7 @@ struct PlantRecommendationView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 10)
-                    .background(Color(UIColor.systemGroupedBackground).opacity(0.5))
                     .cornerRadius(12)
-                    .shadow(radius: 2)
                 }
             }
             .padding(.horizontal)
