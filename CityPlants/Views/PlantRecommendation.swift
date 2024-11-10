@@ -67,7 +67,9 @@ struct PlantRecommendationView: View {
                         }
                         
                         // NavigationLink to ARExperienceView after the plant recommendations
-                        NavigationLink(destination: ARExperienceView()) {
+                        NavigationLink(destination: ARExperienceView(
+                            initialRecommendedPlants: Set(recommendedPlants.map{$0.usdz})
+                        )) {
                             Text("Open With AR")
                                 .font(.headline)
                                 .fontWeight(.medium)

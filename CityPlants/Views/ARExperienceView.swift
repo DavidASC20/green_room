@@ -61,8 +61,16 @@ struct ARExperienceView: View {
         "yucca.usdz": "Yucca",
         "zz.uszd": "ZZ Plant"
     ]
-    
-    @State private var selectedPlants = Set(["aloe.usdz", "zz.usdz", "cactus.usdz", "areca.usdz", "arrowhead.usdz"])
+// Optional set of initial recommended plants
+   var initialRecommendedPlants: Set<String>?
+
+   // Initialize selected plants based on recommendations or empty set
+   @State private var selectedPlants: Set<String>
+
+   init(initialRecommendedPlants: Set<String>? = nil) {
+       self.initialRecommendedPlants = initialRecommendedPlants
+       _selectedPlants = State(initialValue: initialRecommendedPlants ?? ["aloe.usdz", "zz.usdz", "cactus.usdz", "areca.usdz", "arrowhead.usdz"]) // Use provided recommendations or start empty
+   }
 
     var displayedPlantName: String? {
         guard let fileName = plantName else { return nil }
