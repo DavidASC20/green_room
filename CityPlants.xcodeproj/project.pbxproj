@@ -3,19 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AE2B0602CE0273A004216B7 /* plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2B05F2CE02736004216B7 /* plants.json */; };
+		2AE2B1092CE0BBA1004216B7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2B1082CE0BBA1004216B7 /* Media.xcassets */; };
 		3C22B3B42CDF57E30004885A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B3B32CDF57E30004885A /* AppDelegate.swift */; };
-		3C22B3B62CDF57E30004885A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B3B52CDF57E30004885A /* ContentView.swift */; };
 		3C22B3B82CDF57E40004885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C22B3B72CDF57E40004885A /* Assets.xcassets */; };
 		3C22B3BB2CDF57E40004885A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C22B3BA2CDF57E40004885A /* Preview Assets.xcassets */; };
 		3C22B3C52CDF57E40004885A /* CityPlantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B3C42CDF57E40004885A /* CityPlantsTests.swift */; };
 		3C22B3CF2CDF57E40004885A /* CityPlantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B3CE2CDF57E40004885A /* CityPlantsUITests.swift */; };
 		3C22B3D12CDF57E40004885A /* CityPlantsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B3D02CDF57E40004885A /* CityPlantsUITestsLaunchTests.swift */; };
-		3CF1842C2CDF600F007486D6 /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1842B2CDF600F007486D6 /* pancakes.usdz */; };
-		3CF1842E2CDF6671007486D6 /* flower_tulip.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1842D2CDF6671007486D6 /* flower_tulip.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AE2B05F2CE02736004216B7 /* plants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
+		2AE2B1082CE0BBA1004216B7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3C22B3B02CDF57E30004885A /* CityPlants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityPlants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C22B3B32CDF57E30004885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C22B3B52CDF57E30004885A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C22B3B72CDF57E40004885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C22B3BA2CDF57E40004885A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C22B3C02CDF57E40004885A /* CityPlantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityPlantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,9 +46,12 @@
 		3C22B3CA2CDF57E40004885A /* CityPlantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityPlantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C22B3CE2CDF57E40004885A /* CityPlantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPlantsUITests.swift; sourceTree = "<group>"; };
 		3C22B3D02CDF57E40004885A /* CityPlantsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPlantsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3CF1842B2CDF600F007486D6 /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
-		3CF1842D2CDF6671007486D6 /* flower_tulip.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = flower_tulip.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2AE2B05D2CE01427004216B7 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		2AE2B0BB2CE0BB2E004216B7 /* usdz */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = usdz; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3C22B3AD2CDF57E30004885A /* Frameworks */ = {
@@ -78,6 +81,7 @@
 		3C22B3A72CDF57E30004885A = {
 			isa = PBXGroup;
 			children = (
+				2AE2B1082CE0BBA1004216B7 /* Media.xcassets */,
 				3C22B3B22CDF57E30004885A /* CityPlants */,
 				3C22B3C32CDF57E40004885A /* CityPlantsTests */,
 				3C22B3CD2CDF57E40004885A /* CityPlantsUITests */,
@@ -99,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				3C22B3B32CDF57E30004885A /* AppDelegate.swift */,
-				3C22B3B52CDF57E30004885A /* ContentView.swift */,
-				3CF1842D2CDF6671007486D6 /* flower_tulip.usdz */,
-				3CF1842B2CDF600F007486D6 /* pancakes.usdz */,
+				2AE2B05F2CE02736004216B7 /* plants.json */,
+				2AE2B0BB2CE0BB2E004216B7 /* usdz */,
+				2AE2B05D2CE01427004216B7 /* Views */,
 				3C22B3B72CDF57E40004885A /* Assets.xcassets */,
 				3C22B3B92CDF57E40004885A /* Preview Content */,
 			);
@@ -147,6 +151,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2AE2B05D2CE01427004216B7 /* Views */,
+				2AE2B0BB2CE0BB2E004216B7 /* usdz */,
 			);
 			name = CityPlants;
 			productName = CityPlants;
@@ -237,10 +245,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF1842C2CDF600F007486D6 /* pancakes.usdz in Resources */,
-				3CF1842E2CDF6671007486D6 /* flower_tulip.usdz in Resources */,
 				3C22B3BB2CDF57E40004885A /* Preview Assets.xcassets in Resources */,
 				3C22B3B82CDF57E40004885A /* Assets.xcassets in Resources */,
+				2AE2B0602CE0273A004216B7 /* plants.json in Resources */,
+				2AE2B1092CE0BBA1004216B7 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C22B3B62CDF57E30004885A /* ContentView.swift in Sources */,
 				3C22B3B42CDF57E30004885A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CityPlants/Preview Content\"";
-				DEVELOPMENT_TEAM = DPQWD6RM65;
+				DEVELOPMENT_TEAM = 72TXL385KS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -445,7 +452,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sun.CityPlants;
+				PRODUCT_BUNDLE_IDENTIFIER = com.djchong.CityPlants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CityPlants/Preview Content\"";
-				DEVELOPMENT_TEAM = DPQWD6RM65;
+				DEVELOPMENT_TEAM = 72TXL385KS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -476,7 +483,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sun.CityPlants;
+				PRODUCT_BUNDLE_IDENTIFIER = com.djchong.CityPlants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

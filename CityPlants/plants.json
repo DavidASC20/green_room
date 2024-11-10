@@ -1,0 +1,382 @@
+{
+  "Snake Plant": {
+    "scientific_name": "Sansevieria trifasciata",
+    "light_level": "Low to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, can tolerate low light areas",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "snakeplant.png",
+    "usdz": "snakeplant.usdz"
+  },
+  "ZZ Plant": {
+    "scientific_name": "Zamioculcas zamiifolia",
+    "light_level": "Low to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "zz.png",
+    "usdz": " zz.usdz"
+  },
+  "Pothos": {
+    "scientific_name": "Epipremnum aureum",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, shelves or hanging planters",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "pothos.png",
+    "usdz": "pothos.usdz"
+  },
+  "Spider Plant": {
+    "scientific_name": "Chlorophytum comosum",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, hanging baskets or tables",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "spiderplant.png",
+    "usdz": "spiderplant.usdz"
+  },
+  "Peace Lily": {
+    "scientific_name": "Spathiphyllum",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "peacelily.png",
+    "usdz": "peacelily.usdz"
+  },
+  "Philodendron": {
+    "scientific_name": "Philodendron hederaceum",
+    "light_level": "Medium to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, desks or shelves",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "philodendron.png",
+    "usdz": "philodendron.usdz"
+  },
+  "Cast Iron Plant": {
+    "scientific_name": "Aspidistra elatior",
+    "light_level": "Low to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, low-light rooms",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": false,
+    "png": "castiron.png",
+    "usdz": "castiron.usdz"
+  },
+  "Parlor Palm": {
+    "scientific_name": "Chamaedorea elegans",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "parlorpalm.png",
+    "usdz": "parlorparm.usdz"
+  },
+  "Chinese Evergreen": {
+    "scientific_name": "Aglaonema",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "chineseevergreen.png",
+    "usdz": "chineseevergreen.usdz"
+  },
+  "Dracaena": {
+    "scientific_name": "Dracaena spp.",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "dracaena.png",
+    "usdz": "dracaena.usdz"
+  },
+  "Fiddle Leaf Fig": {
+    "scientific_name": "Ficus lyrata",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, near windows",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "fiddle.png",
+    "usdz": "fiddle.usdz"
+  },
+  "Rubber Plant": {
+    "scientific_name": "Ficus elastica",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Low to medium",
+    "placement": "Indoor, near windows",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "rubber.png",
+    "usdz": "rubber.usdz"
+  },
+  "Areca Palm": {
+    "scientific_name": "Dypsis lutescens",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, well-lit areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "areca.png",
+    "usdz": "areca.usdz"
+  },
+  "Cactus": {
+    "scientific_name": "Various species",
+    "light_level": "Bright direct light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots or outdoor",
+    "watering_frequency": "Monthly",
+    "toxic_to_pets": true,
+    "png": "cactus.png",
+    "usdz": "cactus.usdz"
+  },
+  "Aloe Vera": {
+    "scientific_name": "Aloe barbadensis miller",
+    "light_level": "Bright indirect or direct light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots or outdoor",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "aloe.png",
+    "usdz": "aloe.usdz"
+  },
+  "Croton": {
+    "scientific_name": "Codiaeum variegatum",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, well-lit areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "croton.png",
+    "usdz": "croton.usdz"
+  },
+  "Jade Plant": {
+    "scientific_name": "Crassula ovata",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": true,
+    "png": "jade.png",
+    "usdz": "jade.usdz"
+  },
+  "Yucca": {
+    "scientific_name": "Yucca elephantipes",
+    "light_level": "Bright indirect to direct light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "yucca.png",
+    "usdz": "yucca.usdz"
+  },
+  "Echeveria": {
+    "scientific_name": "Echeveria spp.",
+    "light_level": "Bright direct light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots or outdoor",
+    "watering_frequency": "Monthly",
+    "toxic_to_pets": false,
+    "png": "echeveria.png",
+    "usdz": "echeveria.usdz"
+  },
+  "Boston Fern": {
+    "scientific_name": "Nephrolepis exaltata",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, humid rooms like bathrooms",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "bostonfern.png",
+    "usdz": "bostonfern.usdz"
+  },
+  "Heartleaf Philodendron": {
+    "scientific_name": "Philodendron scandens",
+    "light_level": "Low to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, shelves or hanging planters",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "heartleaf.png",
+    "usdz": "heartleaf.usdz"
+  },
+  "Arrowhead Plant": {
+    "scientific_name": "Syngonium podophyllum",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, tables or hanging planters",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "arrowhead.png",
+    "usdz": "arrowhead.usdz"
+  },
+  "Dieffenbachia": {
+    "scientific_name": "Dieffenbachia spp.",
+    "light_level": "Medium to bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, well-lit areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "dieffenbachia.png",
+    "usdz": "dieffenbachia.usdz"
+  },
+  "Silver Satin Pothos": {
+    "scientific_name": "Scindapsus pictus",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, shelves or hanging planters",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "silverpothos.png",
+    "usdz": "silverpothos.usdz"
+  },
+  "Calathea": {
+    "scientific_name": "Calathea spp.",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, humid rooms like bathrooms",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "calathea.png",
+    "usdz": "calathea.usdz"
+  },
+  "Prayer Plant": {
+    "scientific_name": "Maranta leuconeura",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, humid environments",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "prayer.png",
+    "usdz": "prayer.usdz"
+  },
+  "Golden Pothos": {
+    "scientific_name": "Epipremnum aureum ‘Golden’",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, shelves or hanging planters",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "goldenpothos.png",
+    "usdz": "goldenpothos.usdz"
+  },
+  "Peperomia": {
+    "scientific_name": "Peperomia spp.",
+    "light_level": "Low to bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, desks or shelves",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "peperomia.png",
+    "usdz": "peperomia.usdz"
+  },
+  "Maidenhair Fern": {
+    "scientific_name": "Adiantum raddianum",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium to high",
+    "placement": "Indoor, humid areas like bathrooms",
+    "watering_frequency": "Every 3-5 days",
+    "toxic_to_pets": false,
+    "png": "maidenhair.png",
+    "usdz": "maidenhair.usdz"
+  },
+  "English Ivy": {
+    "scientific_name": "Hedera helix",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, hanging or climbing areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "ivy.png",
+    "usdz": "ivy.usdz"
+  },
+  "Lady Palm": {
+    "scientific_name": "Rhapis excelsa",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, low-light rooms",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": false,
+    "png": "ladypalm.png",
+    "usdz": "ladypalm.usdz"
+  },
+  "Bamboo Palm": {
+    "scientific_name": "Chamaedorea seifrizii",
+    "light_level": "Low to medium indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, low-light areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "bamboopalm.png",
+    "usdz": "bamboopalm.usdz"
+  },
+  "Kimberly Queen Fern": {
+    "scientific_name": "Nephrolepis obliterata",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, humid areas",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "queenfern.png",
+    "usdz": "queenfern.usdz"
+  },
+  "Garden Mum": {
+    "scientific_name": "Chrysanthemum morifolium",
+    "light_level": "Bright direct light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, sunny spots",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "garden.png",
+    "usdz": "garden.usdz"
+  },
+  "Money Tree": {
+    "scientific_name": "Pachira aquatica",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, well-lit rooms",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "money.png",
+    "usdz": "money.usdz"
+  },
+  "Weeping Fig": {
+    "scientific_name": "Ficus benjamina",
+    "light_level": "Bright indirect light",
+    "maintenance_level": "Medium",
+    "placement": "Indoor, near windows",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": true,
+    "png": "weep.png",
+    "usdz": "weep.usdz"
+  },
+  "Banana Tree": {
+    "scientific_name": "Musa spp.",
+    "light_level": "Bright indirect to direct light",
+    "maintenance_level": "High",
+    "placement": "Indoor, sunny spots",
+    "watering_frequency": "Weekly",
+    "toxic_to_pets": false,
+    "png": "banana.png",
+    "usdz": "banana.usdz"
+  },
+  "Haworthia": {
+    "scientific_name": "Haworthia spp.",
+    "light_level": "Bright indirect to direct light",
+    "maintenance_level": "Low",
+    "placement": "Indoor, sunny spots",
+    "watering_frequency": "Biweekly",
+    "toxic_to_pets": false,
+    "png": "haworthia.png",
+    "usdz": "haworthia.usdz"
+  }
+}
