@@ -401,7 +401,7 @@ struct ARExperienceView: View {
 
 struct PlantSelectionView: View {
     let plantModels: [String]
-    let customPlantNames: [String: String] // Custom names for plants
+    let customPlantNames: [String: String]
     @Binding var selectedPlants: Set<String>
     @Binding var isViewAllPresented: Bool
     @State private var searchQuery = ""
@@ -477,15 +477,14 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var selectedEntity: ModelEntity?
     @Binding var selectedModelName: String?
     @Binding var isPlaneDetected: Bool
-    @Binding var plantName: String? // Updated only when a placed model is tapped
-    @Binding var showPlaneDetectionPrompt: Bool // Binding to control the plane detection prompt
-    @Binding var isPlantSelectionExpanded: Bool // Track if plant selection is expanded
+    @Binding var plantName: String?
+    @Binding var showPlaneDetectionPrompt: Bool
+    @Binding var isPlantSelectionExpanded: Bool
 
 
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         
-        // Set up AR session
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal]
         config.environmentTexturing = .automatic
@@ -530,7 +529,7 @@ class Coordinator: NSObject, ARSessionDelegate {
     var selectedModelName: Binding<String?>?
     var isPlaneDetected: Binding<Bool>?
     var plantName: Binding<String?>?
-    var showPlaneDetectionPrompt: Binding<Bool>? // Control for showing prompt
+    var showPlaneDetectionPrompt: Binding<Bool>?
     var isPlantSelectionExpanded: Binding<Bool>?
 
     
@@ -541,7 +540,6 @@ class Coordinator: NSObject, ARSessionDelegate {
         
         let tapLocation = sender.location(in: arView)
         
-        // Check if an entity was tapped in AR view
         if let entity = arView.entity(at: tapLocation) as? ModelEntity {
             selectedEntity?.wrappedValue = entity
             plantName?.wrappedValue = entity.name.replacingOccurrences(of: ".usdz", with: "").capitalized

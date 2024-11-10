@@ -9,26 +9,25 @@ struct GPTView: View {
     @State private var showImagePicker: Bool = false
     @State private var showCameraPicker: Bool = false
     @State private var analysisResult: String? = nil
-    @State private var isAnalyzing: Bool = false  // State for loading animation
+    @State private var isAnalyzing: Bool = false
     
-    // Dropdown state variables
+    
     @State private var hasPet: Bool = false
     @State private var selectedMaintenanceLevel: String = "Low"
     private let maintenanceLevels = ["Low", "Moderate", "High"]
     
-    // Lighting and room size variables populated from GPT analysis
+    
     @State private var lightLevel: String = "Medium"
     @State private var roomSize: String = "Medium"
     private let lightLevels = ["High", "Medium", "Low"]
     private let roomSizes = ["Large", "Medium", "Small"]
     
-    // State for navigation to PlantRecommendationView
+    
     @State private var navigateToRecommendations = false
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                // "Room Analysis" Header
                 Text("🔍 Room Analysis")
                     .font(.title2)
                     .fontWeight(.bold)
@@ -50,13 +49,11 @@ struct GPTView: View {
                             .padding()
                             .foregroundColor(.gray)
                     } else if let result = analysisResult {
-                        // Adding "Room AI Analysis" title above results
                         Text("🧠 Room AI Analysis")
                             .font(.headline)
                             .foregroundColor(.green)
                             .padding(.top, 10)
                         
-                        // Display analysis result with animation
                         Text(result)
                             .font(.body)
                             .padding()
@@ -290,7 +287,6 @@ struct GPTView: View {
 
 }
 
-// Helper extension to resize and compress UIImage to Base64
 extension UIImage {
     func resizedAndCompressedBase64(targetSize: CGSize = CGSize(width: 400, height: 300), compressionQuality: CGFloat = 0.2) -> String? {
         UIGraphicsBeginImageContextWithOptions(targetSize, false, 0.0)
@@ -307,7 +303,6 @@ extension UIImage {
     }
 }
 
-// ImagePicker View to handle image selection or camera capture
 struct ImagePicker: UIViewControllerRepresentable {
     enum SourceType {
         case camera, photoLibrary

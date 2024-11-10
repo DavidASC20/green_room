@@ -4,7 +4,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Background Gradient
                 LinearGradient(
                     gradient: Gradient(colors: [Color.green.opacity(0.1), Color.green.opacity(0.3)]),
                     startPoint: .top,
@@ -35,7 +34,6 @@ struct ContentView: View {
                         .shadow(color: .green, radius: 10, x: 0, y: 10)
                         .padding(.bottom, 20)
                     
-                    // Navigation Link to AR Experience
                     NavigationLink(destination: ARExperienceView()) {
                         Text("Start AR Experience")
                             .font(.headline)
@@ -49,7 +47,6 @@ struct ContentView: View {
                     }
                     .padding(.horizontal, 30)
                     
-                    // Navigation Link to Plant Recommendations
                     NavigationLink(destination: GPTView()) {
                         Text("Get Plant Recommendations")
                             .font(.headline)

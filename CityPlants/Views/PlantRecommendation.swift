@@ -6,7 +6,7 @@ struct PlantRecommendationView: View {
     var maintenanceLevel: String
     var hasPet: Bool
     @State private var recommendedPlants: [Plant] = []
-    @State private var isLoading: Bool = true  // Loading state
+    @State private var isLoading: Bool = true
     @State private var showDetails: Bool = true
     
     var body: some View {
@@ -128,7 +128,6 @@ struct PlantRecommendationView: View {
             return
         }
         
-        // GPT Request setup
         let prompt = """
         I will give you four settings: room size, light level, maintenance level, and if toxic to pets.  If its toxic to pets, do not flaunt it, only mention it if it isnt toxic to pets 
         From there, I want you to choose at most 5 plants that best fit the description from the JSON I provide.  Use your best judgement and keep in mind the settings given to you. 
@@ -234,7 +233,6 @@ struct PlantRecommendationView: View {
        }
 
     
-    // Load plants.json and parse it into Plant objects
     private func loadPlantsJSON() -> String? {
         if let url = Bundle.main.url(forResource: "plants", withExtension: "json"),
            let data = try? Data(contentsOf: url) {
@@ -251,10 +249,8 @@ struct PlantRecommendationView: View {
         
         let decoder = JSONDecoder()
         do {
-            // Decode the JSON as a dictionary with plant names as keys and PlantDetails as values
             let plantDictionary = try decoder.decode([String: PlantDetails].self, from: data)
             
-            // Convert the dictionary into an array of Plant objects, assigning the name from the key
             let plants = plantDictionary.map { (name, details) in
                 Plant(
                     name: name,
