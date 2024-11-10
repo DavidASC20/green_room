@@ -12,65 +12,113 @@ struct ARExperienceView: View {
     @State private var isPlantSelectionExpanded = false
     @State private var showPlaneDetectionPrompt = false
     @State private var isInfoExpanded = false
-    
-    // Full list of plant models available for selection
+    @State private var descriptionText: String = ""
+    @State private var isLoading = false
+    @State private var currentText = ""
+    @State private var typingIndex = 0
+
     let plantModels = [
-        "aloe.usdz", "areca.usdz", "arrowhead.usdz",
-        "bamboopalm.usdz", "banana.usdz", "bostonfern.usdz", "cactus.usdz", "calathea.usdz", "castiron.usdz", "chineseevergreen.usdz", "croton.usdz", "dieffenbachia.usdz", "dracaena.usdz", "echeveria.usdz", "fiddle.usdz", "garden.usdz", "goldenpothos.usdz", "haworthia.usdz", "heartleaf.usdz", "ivy.usdz", "jade.usdz", "ladypalm.usdz", "maidenhair.usdz", "money.usdz", "parlorpalm.usdz", "peacelily.usdz", "peperomia.usdz", "philodendron.usdz", "pothos.usdz", "prayer.usdz", "queenfern.usdz", "rubber.usdz", "silverpothos.usdz", "snakeplant.usdz", "spiderplant.usdz", "succulent.usdz", "weep.usdz", "yucca.usdz", "zz.uszd",
+        "aloe.usdz", "areca.usdz", "arrowhead.usdz", "bamboopalm.usdz",
+        "banana.usdz", "bostonfern.usdz", "cactus.usdz", "calathea.usdz",
+        "castiron.usdz", "chineseevergreen.usdz", "croton.usdz",
+        "dieffenbachia.usdz", "dracaena.usdz", "echeveria.usdz",
+        "fiddle.usdz", "garden.usdz", "goldenpothos.usdz", "haworthia.usdz",
+        "heartleaf.usdz", "ivy.usdz", "jade.usdz", "ladypalm.usdz",
+        "maidenhair.usdz", "money.usdz", "parlorpalm.usdz", "peacelily.usdz",
+        "peperomia.usdz", "philodendron.usdz", "pothos.usdz",
+        "prayer.usdz", "queenfern.usdz", "rubber.usdz", "silverpothos.usdz",
+        "snakeplant.usdz", "spiderplant.usdz", "succulent.usdz",
+        "weep.usdz", "yucca.usdz", "zz.usdz"
     ]
     
-    // Custom names for each model file
     let customPlantNames: [String: String] = [
-        "aloe.usdz": "Aloe Vera",
-        "areca.usdz": "Areca Palm",
-        "arrowhead.usdz": "Arrowhead Plant",
-        "bamboopalm.usdz": "Bamboo Palm",
-        "banana.usdz": "Banana Plant",
-        "bostonfern.usdz": "Boston Fern",
-        "cactus.usdz": "Cactus",
-        "calathea.usdz": "Calathea",
-        "castiron.usdz": "Cast Iron Plant",
-        "chineseevergreen.usdz": "Chinese Evergreen",
-        "croton.usdz": "Croton",
-        "dieffenbachia.usdz": "Dieffenbachia",
-        "dracaena.usdz": "Dracaena",
-        "echeveria.usdz": "Echeveria",
-        "fiddle.usdz": "Fiddle Leaf Fig",
-        "garden.usdz": "Garden Plant",
-        "goldenpothos.usdz": "Golden Pothos",
-        "haworthia.usdz": "Haworthia",
-        "heartleaf.usdz": "Heartleaf Philodendron",
-        "ivy.usdz": "English Ivy",
-        "jade.usdz": "Jade Plant",
-        "ladypalm.usdz": "Lady Palm",
-        "maidenhair.usdz": "Maidenhair Fern",
-        "money.usdz": "Money Tree",
-        "parlorpalm.usdz": "Parlor Palm",
-        "peacelily.usdz": "Peace Lily",
-        "peperomia.usdz": "Peperomia",
-        "philodendron.usdz": "Philodendron",
-        "pothos.usdz": "Pothos",
-        "prayer.usdz": "Prayer Plant",
-        "queenfern.usdz": "Queen Fern",
-        "rubber.usdz": "Rubber Plant",
-        "silverpothos.usdz": "Silver Pothos",
-        "snakeplant.usdz": "Snake Plant",
-        "spiderplant.usdz": "Spider Plant",
-        "succulent.usdz": "Succulent",
-        "weep.usdz": "Weeping Fig",
-        "yucca.usdz": "Yucca",
-        "zz.uszd": "ZZ Plant"
-    ]
-// Optional set of initial recommended plants
-   var initialRecommendedPlants: Set<String>?
+            "aloe.usdz": "Aloe Vera",
+            "areca.usdz": "Areca Palm",
+            "arrowhead.usdz": "Arrowhead Plant",
+            "bamboopalm.usdz": "Bamboo Palm",
+            "banana.usdz": "Banana Plant",
+            "bostonfern.usdz": "Boston Fern",
+            "cactus.usdz": "Cactus",
+            "calathea.usdz": "Calathea",
+            "castiron.usdz": "Cast Iron Plant",
+            "chineseevergreen.usdz": "Chinese Evergreen",
+            "croton.usdz": "Croton",
+            "dieffenbachia.usdz": "Dieffenbachia",
+            "dracaena.usdz": "Dracaena",
+            "echeveria.usdz": "Echeveria",
+            "fiddle.usdz": "Fiddle Leaf Fig",
+            "garden.usdz": "Garden Plant",
+            "goldenpothos.usdz": "Golden Pothos",
+            "haworthia.usdz": "Haworthia",
+            "heartleaf.usdz": "Heartleaf Philodendron",
+            "ivy.usdz": "English Ivy",
+            "jade.usdz": "Jade Plant",
+            "ladypalm.usdz": "Lady Palm",
+            "maidenhair.usdz": "Maidenhair Fern",
+            "money.usdz": "Money Tree",
+            "parlorpalm.usdz": "Parlor Palm",
+            "peacelily.usdz": "Peace Lily",
+            "peperomia.usdz": "Peperomia",
+            "philodendron.usdz": "Philodendron",
+            "pothos.usdz": "Pothos",
+            "prayer.usdz": "Prayer Plant",
+            "queenfern.usdz": "Queen Fern",
+            "rubber.usdz": "Rubber Plant",
+            "silverpothos.usdz": "Silver Pothos",
+            "snakeplant.usdz": "Snake Plant",
+            "spiderplant.usdz": "Spider Plant",
+            "succulent.usdz": "Succulent",
+            "weep.usdz": "Weeping Fig",
+            "yucca.usdz": "Yucca",
+            "zz.usdz": "ZZ Plant",
+            "Aloe": "Aloe Vera",
+            "Areca": "Areca Palm",
+            "Arrowhead": "Arrowhead Plant",
+            "Bamboopalm": "Bamboo Palm",
+            "Banana": "Banana Plant",
+            "Bostonfern": "Boston Fern",
+            "Cactus": "Cactus",
+            "Calathea": "Calathea",
+            "Castiron": "Cast Iron Plant",
+            "Chineseevergreen": "Chinese Evergreen",
+            "Croton": "Croton",
+            "Dieffenbachia": "Dieffenbachia",
+            "Dracaena": "Dracaena",
+            "Echeveria": "Echeveria",
+            "Fiddle": "Fiddle Leaf Fig",
+            "Garden": "Garden Plant",
+            "Goldenpothos": "Golden Pothos",
+            "Haworthia": "Haworthia",
+            "Heartleaf": "Heartleaf Philodendron",
+            "Ivy": "English Ivy",
+            "Jade": "Jade Plant",
+            "Ladypalm": "Lady Palm",
+            "Maidenhair": "Maidenhair Fern",
+            "Money": "Money Tree",
+            "Parlorpalm": "Parlor Palm",
+            "Peacelily": "Peace Lily",
+            "Peperomia": "Peperomia",
+            "Philodendron": "Philodendron",
+            "Pothos": "Pothos",
+            "Prayer": "Prayer Plant",
+            "Queenfern": "Queen Fern",
+            "Rubber": "Rubber Plant",
+            "Silverpothos": "Silver Pothos",
+            "Snakeplant": "Snake Plant",
+            "Spiderplant": "Spider Plant",
+            "Succulent": "Succulent",
+            "Weep": "Weeping Fig",
+            "Yucca": "Yucca",
+            "Zz": "ZZ Plant"
+        ]
 
-   // Initialize selected plants based on recommendations or empty set
-   @State private var selectedPlants: Set<String>
+    var initialRecommendedPlants: Set<String>?
+    @State private var selectedPlants: Set<String>
 
-   init(initialRecommendedPlants: Set<String>? = nil) {
-       self.initialRecommendedPlants = initialRecommendedPlants
-       _selectedPlants = State(initialValue: initialRecommendedPlants ?? ["aloe.usdz", "zz.usdz", "cactus.usdz", "areca.usdz", "arrowhead.usdz"]) // Use provided recommendations or start empty
-   }
+    init(initialRecommendedPlants: Set<String>? = nil) {
+        self.initialRecommendedPlants = initialRecommendedPlants
+        _selectedPlants = State(initialValue: initialRecommendedPlants ?? ["aloe.usdz", "zz.usdz", "cactus.usdz", "areca.usdz", "arrowhead.usdz"])
+    }
 
     var displayedPlantName: String? {
         guard let fileName = plantName else { return nil }
@@ -124,15 +172,25 @@ struct ARExperienceView: View {
                     .shadow(radius: 5)
                     .frame(maxWidth: .infinity, alignment: .center)
                     
-                    // Custom styled More Info section with a cleaner header
                     VStack(alignment: .leading, spacing: 8) {
                         Button(action: {
                             withAnimation {
                                 isInfoExpanded.toggle()
                             }
+                            if isInfoExpanded, let plantName = displayedPlantName {
+                                isLoading = true
+                                fetchPlantInfo(plantName: plantName) { description, placement in
+                                    DispatchQueue.main.async {
+                                        self.descriptionText = description ?? "No description available."
+                                        self.isLoading = false
+                                        self.typingIndex = 0
+                                        startTypingAnimation()
+                                    }
+                                }
+                            }
                         }) {
                             HStack {
-                                Text("More Info")
+                                Text("🪴 More Info")
                                     .font(.headline)
                                     .foregroundColor(.green)
                                 Spacer()
@@ -140,45 +198,32 @@ struct ARExperienceView: View {
                                     .foregroundColor(.green)
                             }
                             .padding()
-                            .background(Color.white.opacity(0.9))
-                            .cornerRadius(8)
-                            .shadow(radius: 2)
+                            .background(RoundedRectangle(cornerRadius: 8).fill(Color.white))
                         }
 
                         if isInfoExpanded {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Description")
-                                    .font(.headline)
-                                    .foregroundColor(.green)
-                                Text("This plant is known for its resilience and easy care. It thrives in various conditions and requires minimal maintenance.")
+                            if isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .green))
+                                    .scaleEffect(1.2)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                            } else {
+                                Text(currentText)
                                     .font(.subheadline)
                                     .foregroundColor(.black)
-                                    .padding(.bottom, 5)
-                                
-                                Text("Care Instructions")
-                                    .font(.headline)
-                                    .foregroundColor(.green)
-                                Text("Water weekly and ensure it gets indirect sunlight. Fertilize monthly during spring and summer for optimal growth.")
-                                    .font(.subheadline)
-                                    .foregroundColor(.black)
+                                    .padding(10)
+                                    .background(RoundedRectangle(cornerRadius: 12).fill(Color.white))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(Color.green.opacity(0.3), lineWidth: 1)
+                                    )
                             }
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 3)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.green.opacity(0.4), lineWidth: 1)
-                            )
                         }
                     }
-                    .padding([.horizontal, .bottom])
-                    .background(Color.white.opacity(0.9))
-                    .cornerRadius(12)
-                    .shadow(radius: 5)
+                    .frame(maxWidth: 300)
                 }
-                .padding(.top, 15)
-                .frame(maxWidth: .infinity)
+                .padding(.top, 20)
+                .frame(maxWidth: .infinity, alignment: .top)
             }
 
             VStack {
@@ -247,7 +292,7 @@ struct ARExperienceView: View {
                 ForEach(Array(selectedPlants), id: \.self) { modelName in
                     Button(action: {
                         selectedModelName = modelName
-                        plantName = modelName // Use file name to look up custom name
+                        plantName = modelName
                         showPlaneDetectionPrompt = !isPlaneDetected && isPlantSelectionExpanded
                     }) {
                         VStack {
@@ -292,7 +337,63 @@ struct ARExperienceView: View {
             .padding(.horizontal)
         }
     }
+    
+    func startTypingAnimation() {
+        currentText = ""
+        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+            if typingIndex < descriptionText.count {
+                let index = descriptionText.index(descriptionText.startIndex, offsetBy: typingIndex)
+                currentText.append(descriptionText[index])
+                typingIndex += 1
+            } else {
+                timer.invalidate()
+            }
+        }
+    }
+
+    func fetchPlantInfo(plantName: String, completion: @escaping (String?, String?) -> Void) {
+        guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else { return }
+
+        let message = [
+            "role": "user",
+            "content": "Provide a 1-2 sentence description and the best placement for the plant named \(plantName)."
+        ]
+
+        let body: [String: Any] = [
+            "model": "gpt-4o-mini",
+            "messages": [message],
+            "max_tokens": 200
+        ]
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(API_KEY)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: body, options: []) else { return }
+        request.httpBody = httpBody
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Error fetching plant info: \(error)")
+                completion(nil, nil)
+                return
+            }
+            
+            guard let data = data,
+                  let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                  let choices = jsonResponse["choices"] as? [[String: Any]],
+                  let message = choices.first?["message"] as? [String: Any],
+                  let content = message["content"] as? String else {
+                completion(nil, nil)
+                return
+            }
+            
+            completion(content, nil)
+        }.resume()
+    }
 }
+
 
 
 
